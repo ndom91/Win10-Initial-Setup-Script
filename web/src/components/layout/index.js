@@ -1,18 +1,28 @@
 import React from 'react'
-import Router from 'next/router'
+import { Heading, Pane } from 'evergreen-ui'
 
 class Layout extends React.Component {
-  constructor (props) {
-    super(props)
-
-  }
-
   render () {
     return (
       <div>
-        <div>
-          Layout!
-        </div>
+        <Pane
+          elevation={1}
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
+          flexDirection='column'
+          background='tint2'
+          border='muted'
+        >
+          <Heading
+            size={700}
+            marginTop='default'
+            marginBottom='16'
+          >
+            Win10 Setup Script Generator
+          </Heading>
+          {this.props.children}
+        </Pane>
         <style jsx>{`
 
         `}
